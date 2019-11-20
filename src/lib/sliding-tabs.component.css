@@ -1,0 +1,21 @@
+/*
+    !!! some css classes are defined in the TypeScript file because they are dynamically created !!!
+*/
+
+#tabs-container {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.tab {
+    margin-right: 25px;
+    background: none;
+    border: none; 
+    position: relative;
+    color: #bbbbbb;
+    transition: .3s ease-in-out;
+}
+
+.tabSelected {
+    color: black;
+}
