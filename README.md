@@ -1,6 +1,6 @@
 # angular-sliding-tabs
 
-## Requirements
+![video showing the component in use](default_example.gif)
 
 ## Installation
 
