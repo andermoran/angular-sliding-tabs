@@ -1,6 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input, ElementRef } from '@angular/core';
 import Tab from './tab';
-import { delay } from 'q';
 
 @Component({
   selector: 'sliding-tabs',
@@ -12,6 +11,9 @@ export class SlidingTabsComponent implements OnInit {
   @Output() tabChanged = new EventEmitter<string>();
   @Input('tabs') tabNames: string[];
   @Input() size: string = 'h1';
+  @Input() selectedTabStyle: Object;
+  @Input() unselectedTabStyle: Object;
+  @Input() lineColor: string = 'black';
   tabs: Tab[];
   selectedTab: Tab;
 
@@ -62,7 +64,6 @@ export class SlidingTabsComponent implements OnInit {
       height: .25rem;
       width: 0%;
       margin: 0;
-      background: black;
       border: none;
       transition: .3s ease-in-out;
       position: relative;

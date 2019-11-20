@@ -1,18 +1,18 @@
 <div id="tabs-container">
     <div *ngIf="size.includes('px')">
-        <button [ngStyle]="{fontSize: size}" *ngFor="let tab of tabs" [id]="tab.title + 'Tab'"  class="tab" [ngClass]="getStyleClass(tab)" (click)="tabClicked(tab)"><h3>{{ tab.title }}</h3></button>
-        <hr class="underline">
+        <button [ngStyle]="tab.title==selectedTab.title ? selectedTabStyle : unselectedTabStyle" [ngStyle]="{fontSize: size}" *ngFor="let tab of tabs" [id]="tab.title + 'Tab'"  class="tab" [ngClass]="getStyleClass(tab)" (click)="tabClicked(tab)"><h3>{{ tab.title }}</h3></button>
+        <hr class="underline" [ngStyle]="{background: lineColor}">
     </div>
     <div *ngIf="size == 'h1'">
-        <button *ngFor="let tab of tabs" [id]="tab.title + 'Tab'"  class="tab" [ngClass]="getStyleClass(tab)" (click)="tabClicked(tab)"><h1>{{ tab.title }}</h1></button>
-        <hr class="underline">
+        <button [ngStyle]="tab.title==selectedTab.title ? selectedTabStyle : unselectedTabStyle" *ngFor="let tab of tabs" [id]="tab.title + 'Tab'"  class="tab" [ngClass]="getStyleClass(tab)" (click)="tabClicked(tab)"><h1>{{ tab.title }}</h1></button>
+        <hr class="underline" [ngStyle]="{background: lineColor}">
     </div>
     <div *ngIf="size == 'h2'">
-        <button *ngFor="let tab of tabs" [id]="tab.title + 'Tab'"  class="tab" [ngClass]="getStyleClass(tab)" (click)="tabClicked(tab)"><h2>{{ tab.title }}</h2></button>
-        <hr class="underline">
+        <button [ngStyle]="tab.title==selectedTab.title ? selectedTabStyle : unselectedTabStyle" *ngFor="let tab of tabs" [id]="tab.title + 'Tab'"  class="tab" [ngClass]="getStyleClass(tab)" (click)="tabClicked(tab)"><h2>{{ tab.title }}</h2></button>
+        <hr class="underline" [ngStyle]="{background: lineColor}">
     </div>
     <div *ngIf="size == 'h3'">
-        <button *ngFor="let tab of tabs" [id]="tab.title + 'Tab'" class="tab" [ngClass]="getStyleClass(tab)" (click)="tabClicked(tab)"><h3>{{ tab.title }}</h3></button>
-        <hr class="underline">
+        <button [ngStyle]="tab.title==selectedTab.title ? selectedTabStyle : unselectedTabStyle" *ngFor="let tab of tabs" [id]="tab.title + 'Tab'" class="tab" [ngClass]="getStyleClass(tab)" (click)="tabClicked(tab)"><h3>{{ tab.title }}</h3></button>
+        <hr class="underline" [ngStyle]="{background: lineColor}"]>
     </div>
 </div>
